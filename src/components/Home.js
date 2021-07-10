@@ -1,5 +1,6 @@
 import React from "react";
 import Curriculum from "./Curriculum";
+
 function Home() {
   return (
     <div>
