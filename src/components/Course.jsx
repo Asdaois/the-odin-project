@@ -15,9 +15,9 @@ function Course() {
     <div className="">
       {path ? (
         <>
-          <div>
-            <h1 className="">{path.title}</h1>
-            <h2 className="">{path.description}</h2>
+          <div className="container px-5 py-10 mx-auto text-center">
+            <h1 className="text-4xl font-medium mb-4">{path.title}</h1>
+            <h2 className="mx-auto text-base">{path.description}</h2>
           </div>
           <div className="flex flex-row flex-wrap justify-around">
             {path.projects.map((project, i) => {
@@ -31,9 +31,9 @@ function Course() {
                         className="h-48 w-full object-cover md:w-48"
                       />
                     </div>
-                    <div class="p-8 flex-none">
-                      <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
-                        {project.title}
+                    <div class="p-8">
+                      <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold ">
+                        <h3 className="whitespace-normal">{project.title}</h3>
                       </div>
                       <p class="mt-2 text-gray-500">{project.description} </p>
                       <Link
