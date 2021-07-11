@@ -1,14 +1,11 @@
 import { curriculum } from "data";
 import React from "react";
-import { useHistory, useRouteMatch } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 export default function Curriculum() {
   const history = useHistory();
-  const match = useRouteMatch();
   const handleClick = (title) => {
-    history.push(
-      `${match.url}/course/${title.toLowerCase().replace(" ", "-")}`
-    );
+    history.push(`/course/${title.toLowerCase().replace(" ", "-")}`);
   };
 
   return (
