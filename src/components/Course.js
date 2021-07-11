@@ -1,9 +1,10 @@
 import { curriculum } from "data";
 import changeNameToUrl from "helper/urlHelper";
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useRouteMatch } from "react-router-dom";
 
 function Course() {
+  const match = useRouteMatch();
   const { course } = useParams();
   const [path, setPath] = useState(null);
   useEffect(() => {
@@ -37,7 +38,7 @@ function Course() {
                       </div>
                       <p class="mt-2 text-gray-500">{project.description} </p>
                       <Link
-                        href="#"
+                        to={`${match.url}`}
                         class="block mt-1 text-lg leading-tight font-medium text-black hover:underline"
                       >
                         Go to project
