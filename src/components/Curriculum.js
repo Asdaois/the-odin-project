@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 export default function Curriculum() {
   const history = useHistory();
   const handleClick = (title) => {
-    history.push(`/course/${title.toLowerCase().replace(" ", "-")}`);
+    history.push(`course/${title.toLowerCase().replace(" ", "-")}`);
   };
 
   return (

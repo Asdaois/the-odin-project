@@ -1,5 +1,5 @@
 import { curriculum } from "data";
-import changeNameToUrl from "helper/urlHelper";
+import { changeNameToUrl } from "helper/urlHelper";
 import React, { useEffect, useState } from "react";
 import { Link, useParams, useRouteMatch } from "react-router-dom";
 
@@ -43,7 +43,7 @@ function Course() {
                       <p class="mt-2 text-gray-500">{project.description} </p>
                       <Link
                         to={`${match.url}/${changeNameToUrl(project.title)}`}
-                        className="block mt-1 text-lg leading-tight font-medium text-black hover:underline mt-auto"
+                        className="block text-lg leading-tight font-medium text-black hover:underline mt-auto"
                       >
                         Go to project
                       </Link>

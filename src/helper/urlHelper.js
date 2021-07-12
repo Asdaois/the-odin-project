@@ -1,3 +1,3 @@
-export default function changeNameToUrl(name = "") {
+export function changeNameToUrl(name = "") {
   return name.toLowerCase().replace(new RegExp(" ", "g"), "-");
 }
