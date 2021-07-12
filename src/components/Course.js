@@ -55,7 +55,7 @@ function Course() {
           </div>
         </>
       ) : (
-        <h1>Course Not Found</h1>
+        <h1>Loading</h1>
       )}
     </div>
   );
