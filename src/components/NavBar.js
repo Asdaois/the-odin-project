@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 
 function NavBar() {
   const [show, setShow] = useState(false);
-
+  const [drop, setDrop] = useState([false, false]);
   return (
-    <div className="relative min-h-screen md:flex ">
+    <div className="relative min-h-screen md:flex">
       <button
         onClick={() => {
           setShow(!show);
@@ -32,7 +32,7 @@ function NavBar() {
       <div
         className={`bg-blue-400 text-gray-800 w-64 py-7 inset-y-0 left-0 transform ${
           show ? "-translate-x-0" : "-translate-x-full"
-        } transition duration-300 ease-in-out absolute`}
+        } transition duration-300 ease-in-out fixed inline-table`}
       >
         <a href="a" className="flex items-center">
           <svg
@@ -51,33 +51,83 @@ function NavBar() {
           </svg>
           <span className="text-2xl font-extrabold ml-2">The Odin Project</span>
         </a>
-        <nav className="mt-6 p-2">{generateLinks()}</nav>
+        <nav className="mt-6 p-2 min-h-screen">{generateLinks()}</nav>
       </div>
     </div>
   );
 
   function generateLinks() {
-    return curriculum.paths.map((path) => {
+    return curriculum.paths.map((path, i) => {
       const pathUrl = `/course/${changeNameToUrl(path.title)}`;
       return (
         <div className="">
-          <Link
-            to={pathUrl}
-            className="block px-4 py-2 rounded hover:bg-blue-500 transition-all duration-200"
+          <div className="flex justify-between">
+            <button
+              onClick={() => {
+                const newDrop = [false, false];
+                newDrop[i] = true;
+                setDrop(newDrop);
+              }}
+              className={`${
+                drop[i] ? "rotate-0" : "-rotate-90"
+              } hover:bg-blue-500 rounded-full`}
+            >
+              {drop[i] ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className={`h-6 w-6 ${drop[i] ? "rotate-0" : "-rotate-90"}`}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              )}
+            </button>
+            <Link
+              to={pathUrl}
+              className="block px-4 py-2 rounded hover:bg-blue-500 transition-all duration-200"
+            >
+              {path.title}
+            </Link>
+          </div>
+          <div
+            class={`px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800 transition-all duration-200 ease-in-out ${
+              drop[i] ? "visible" : "hidden"
+            }`}
           >
-            {path.title}
-          </Link>
-          {path.projects.map((project) => {
-            const projectUrl = `${pathUrl}/${changeNameToUrl(project.title)}`;
-            return (
-              <Link
-                to={projectUrl}
-                className="block ml-1 px-4 py-2 rounded hover:bg-blue-300 transition-all duration-200"
-              >
-                {project.title}
-              </Link>
-            );
-          })}
+            {path.projects.map((project) => {
+              const projectUrl = `${pathUrl}/${changeNameToUrl(project.title)}`;
+              return (
+                <Link
+                  to={projectUrl}
+                  className="block ml-1 px-4 py-2 rounded hover:bg-blue-300 transition-all duration-200"
+                >
+                  {project.title}
+                </Link>
+              );
+            })}
+          </div>
         </div>
       );
     });

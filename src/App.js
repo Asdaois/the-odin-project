@@ -6,13 +6,13 @@ import { Route, Switch } from "react-router-dom";
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100 flex">
+    <div className="min-h-screen bg-gray-100 flex m-0">
       <NavBar />
       <Switch>
         <Route path={`/course/:course`}>
           <Course />
         </Route>
-        <Route exact path={`/`}>
+        <Route path={`/`}>
           <Home />
         </Route>
       </Switch>
