@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/the-odin-project/static/css/main.a9d2eeaf.chunk.css",
-    "main.js": "/the-odin-project/static/js/main.6ab3e602.chunk.js",
-    "main.js.map": "/the-odin-project/static/js/main.6ab3e602.chunk.js.map",
+    "main.js": "/the-odin-project/static/js/main.b64dde06.chunk.js",
+    "main.js.map": "/the-odin-project/static/js/main.b64dde06.chunk.js.map",
     "runtime-main.js": "/the-odin-project/static/js/runtime-main.327344d2.js",
     "runtime-main.js.map": "/the-odin-project/static/js/runtime-main.327344d2.js.map",
-    "static/js/2.0a6f1f69.chunk.js": "/the-odin-project/static/js/2.0a6f1f69.chunk.js",
-    "static/js/2.0a6f1f69.chunk.js.map": "/the-odin-project/static/js/2.0a6f1f69.chunk.js.map",
+    "static/js/2.70f77d35.chunk.js": "/the-odin-project/static/js/2.70f77d35.chunk.js",
+    "static/js/2.70f77d35.chunk.js.map": "/the-odin-project/static/js/2.70f77d35.chunk.js.map",
     "index.html": "/the-odin-project/index.html",
     "static/css/main.a9d2eeaf.chunk.css.map": "/the-odin-project/static/css/main.a9d2eeaf.chunk.css.map",
-    "static/js/2.0a6f1f69.chunk.js.LICENSE.txt": "/the-odin-project/static/js/2.0a6f1f69.chunk.js.LICENSE.txt"
+    "static/js/2.70f77d35.chunk.js.LICENSE.txt": "/the-odin-project/static/js/2.70f77d35.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.327344d2.js",
-    "static/js/2.0a6f1f69.chunk.js",
+    "static/js/2.70f77d35.chunk.js",
     "static/css/main.a9d2eeaf.chunk.css",
-    "static/js/main.6ab3e602.chunk.js"
+    "static/js/main.b64dde06.chunk.js"
   ]
 }
