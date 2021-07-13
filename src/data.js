@@ -1,3 +1,4 @@
+import lybraryImage from "animations/library.gif";
 export const curriculum = {
   title: "Full Stack Javascript",
   description:
@@ -8,7 +9,11 @@ export const curriculum = {
       description:
         "Make your websites dynamic and interactive with JavaScript! You'll create features and stand-alone applications. This module includes projects where you will learn how to manipulate the DOM, use object-oriented programming principles, and build single page applications with React.",
       projects: [
-        { title: "Library", description: "A small Library app.", image: "" },
+        {
+          title: "Library",
+          description: "A small Library app of books.",
+          image: lybraryImage,
+        },
         { title: "Tic Tac Toe", description: "NOT YET", image: "" },
         { title: "Restaurant Page", description: "NOT YET", image: "" },
         { title: "Todo List", description: "NOT YET", image: "" },

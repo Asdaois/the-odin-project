@@ -121,7 +121,7 @@ function App() {
                 setNewBook(new Book());
                 setBooks(newBooks);
               }}
-              className="text-blue-700"
+              className="text-blue-700 transform hover:scale-125 transition-all duration-300"
             >
               <AddDocument />
             </button>
@@ -160,7 +160,7 @@ function App() {
                   {book.author}
                 </h4>
                 <button
-                  className="text-red-700"
+                  className="text-red-700 transform hover:scale-125 transition-all duration-300"
                   onClick={() => {
                     const newBooks = [
                       ...books.slice(0, i),

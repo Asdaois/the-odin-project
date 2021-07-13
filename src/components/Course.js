@@ -30,9 +30,9 @@ function Course() {
                   <div className="md:flex">
                     <div className="md:flex-shrink-0">
                       <img
-                        src=""
-                        alt=""
-                        className="h-48 w-full object-cover md:w-48"
+                        src={project.image}
+                        alt={`Preview of ${project.title}`}
+                        className="h-48 w-full object-cover md:w-48  inset-0 object-left "
                       />
                     </div>
                     <div class="p-8 flex flex-col">
