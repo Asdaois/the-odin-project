@@ -22,16 +22,6 @@ function App() {
       "Jose Guevara",
       "Un buen libro para una lectura rapidaUn buen libro para una lectura rapidaUn buen libro para una lectura rapidaUn buen libro para una lectura rapidaUn buen libro para una lectura rapida"
     ),
-    new Book(
-      "Juegos del destino",
-      "Jose Guevara",
-      "Un buen libro para una lectura rapida"
-    ),
-    new Book(
-      "Juegos del destino",
-      "Jose Guevara",
-      "Un buen libro para una lectura rapida"
-    ),
   ]);
   function handleNewBook(e) {
     const book = { ...newBook };

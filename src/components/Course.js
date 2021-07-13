@@ -41,9 +41,7 @@ function Course() {
                       </div>
                       <p class="mt-2 text-gray-500">{project.description} </p>
                       <Link
-                        to={`/the-odin-project/${changeNameToUrl(
-                          project.title
-                        )}`}
+                        to={`/${changeNameToUrl(project.title)}`}
                         className="block text-lg leading-tight font-medium text-black hover:underline mt-auto"
                       >
                         Go to project

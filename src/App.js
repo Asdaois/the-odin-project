@@ -11,10 +11,10 @@ function App() {
     <div className="min-h-screen bg-gray-100 flex m-0">
       <NavBar />
       <Switch>
-        <Route path={"/the-odin-project/library"}>
+        <Route path={"/library"}>
           <Library />
         </Route>
-        <Route path={"/the-odin-project/tic-tac-toe"}>
+        <Route path={"/tic-tac-toe"}>
           <TicTacToe />
         </Route>
         <Route path={`/course/:course`}>
