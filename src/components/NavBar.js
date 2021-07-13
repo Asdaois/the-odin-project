@@ -34,7 +34,10 @@ function NavBar() {
           show ? "-translate-x-0" : "-translate-x-full"
         } transition duration-300 ease-in-out fixed inline-table`}
       >
-        <a href="a" className="flex items-center">
+        <a
+          href="https://www.theodinproject.com/dashboard"
+          className="flex items-center"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-8 w-8"
