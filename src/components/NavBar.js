@@ -120,7 +120,9 @@ function NavBar() {
             }`}
           >
             {path.projects.map((project) => {
-              const projectUrl = `${pathUrl}/${changeNameToUrl(project.title)}`;
+              const projectUrl = `/the-odin-project/${changeNameToUrl(
+                project.title
+              )}`;
               return (
                 <Link
                   to={projectUrl}
