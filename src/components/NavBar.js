@@ -6,8 +6,9 @@ import { Link } from "react-router-dom";
 function NavBar() {
   const [show, setShow] = useState(false);
   const [drop, setDrop] = useState([false, false]);
+
   return (
-    <div className="relative min-h-screen md:flex">
+    <div className="relative min-h-screen md:flex opacity-90">
       <button
         onClick={() => {
           setShow(!show);
@@ -64,18 +65,24 @@ function NavBar() {
       const pathUrl = `/course/${changeNameToUrl(path.title)}`;
       return (
         <div className="">
-          <div className="flex justify-between">
+          <div className="flex justify-between mb-3">
+            <Link
+              to={pathUrl}
+              className="block px-4 py-2 rounded hover:bg-blue-500 transition-all duration-200"
+            >
+              {path.title}
+            </Link>
             <button
               onClick={() => {
                 const newDrop = [false, false];
-                newDrop[i] = true;
+                newDrop[i] = !drop[i];
                 setDrop(newDrop);
               }}
-              className={`${
+              className={` transform transition-all duration-500 ${
                 drop[i] ? "rotate-0" : "-rotate-90"
-              } hover:bg-blue-500 rounded-full`}
+              } hover:bg-blue-500 rounded-full mx-3`}
             >
-              {drop[i] ? (
+              {
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className={`h-6 w-6 ${drop[i] ? "rotate-0" : "-rotate-90"}`}
@@ -90,29 +97,8 @@ function NavBar() {
                     d="M19 9l-7 7-7-7"
                   />
                 </svg>
-              ) : (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              )}
+              }
             </button>
-            <Link
-              to={pathUrl}
-              className="block px-4 py-2 rounded hover:bg-blue-500 transition-all duration-200"
-            >
-              {path.title}
-            </Link>
           </div>
           <div
             class={`px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800 transition-all duration-200 ease-in-out ${

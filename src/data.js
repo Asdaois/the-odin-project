@@ -14,7 +14,11 @@ export const curriculum = {
           description: "A small Library app of books.",
           image: lybraryImage,
         },
-        { title: "Tic Tac Toe", description: "NOT YET", image: "" },
+        {
+          title: "Tic Tac Toe",
+          description: "A implementation of the famous game",
+          image: "",
+        },
         { title: "Restaurant Page", description: "NOT YET", image: "" },
         { title: "Todo List", description: "NOT YET", image: "" },
         { title: "Weather App", description: "NOT YET", image: "" },
