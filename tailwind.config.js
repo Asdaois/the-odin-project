@@ -7,6 +7,7 @@ module.exports = {
   variants: {
     extend: {
       cursor: ["hover", "focus"],
+      ringColor: ["hover", "active"],
     },
   },
   plugins: [],
