@@ -5,13 +5,10 @@ export default function Food({ food, index }) {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    const topPosition = ref.current.getBoundingClientRect().top;
-    const botPosition = ref.current.getBoundingClientRect().bottom;
-
     const onScroll = () => {
+      const topPosition = ref.current.getBoundingClientRect().top;
       const scrollPosition = window.scrollY + window.innerHeight;
-      const isNotScrolledPast = window.scrollY < botPosition + 100;
-      if (topPosition < scrollPosition && isNotScrolledPast) {
+      if (topPosition < scrollPosition) {
         setShow(true);
       } else {
         setShow(false);
@@ -25,32 +22,30 @@ export default function Food({ food, index }) {
   return (
     <div
       ref={ref}
-      className="flex border-2 rounded-lg border-gray-400 bg-gray-200 text-gray-700 w-1/2 self-center"
+      className="flex border-2 rounded-lg border-gray-400 bg-gray-200 text-gray-700 lg:w-1/2 self-center flex-col lg:flex-row md:w-1/3 lg:h-72"
       key={food.name.toLowerCase()}
     >
       <div
-        className={`flex flex-col flex-none w-1/2 ${
+        className={`flex flex-col flex-none lg:h-72 lg:w-1/2 lg:${
           index % 2 === 0 ? "order-1" : null
         }`}
       >
-        <h3 className="text-2xl h-1/4 text-center self-center pt-3 text-blue-500">
+        <h3 className="text-2xl h-1/4 text-center self-center pt-3 text-blue-500 lg:h-auto">
           {food.name}
         </h3>
         <p className="h-full p-3">{food.description}</p>
       </div>
-      <div className="flex-none w-1/2 object-contain rounded-lg">
-        <img
-          src={food.image}
-          alt=""
-          className={`transform transition-all ease-in-out duration-500 opacity-0  ${
-            show
-              ? "opacity-100 translate-x-0"
-              : index % 2
-              ? "translate-x-1/3"
-              : "-translate-x-1/3"
-          }`}
-        />
-      </div>
+      <img
+        src={food.image}
+        alt=""
+        className={`flex-none rounded-lg lg:w-1/2 transform transition-all ease-in-out duration-500 object-cover translate-x-0 md:opacity-0 lg:h-auto md:${
+          show
+            ? "opacity-100 translate-x-0"
+            : index % 2
+            ? "translate-x-1/3 opacity-0"
+            : "-translate-x-1/3 opacity-0"
+        }`}
+      />
     </div>
   );
 }

@@ -7,7 +7,7 @@ export default function NavBar({ handleClick, tabs, currentTab }) {
       <img
         src={logo}
         alt=""
-        className="object-scale-down h-24 w-24 rounded-full self-center object-center mx-4"
+        className="object-scale-down h-24 w-24 rounded-full self-center object-center mx-4 hidden sm:block"
       />
       <nav className="flex justify-center items-center">
         {Object.keys(tabs).map((tab, i) => {
