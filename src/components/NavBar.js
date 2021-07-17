@@ -64,7 +64,7 @@ function NavBar() {
     return curriculum.paths.map((path, i) => {
       const pathUrl = `/course/${changeNameToUrl(path.title)}`;
       return (
-        <div className="">
+        <div className="" key={i}>
           <div className="flex justify-between mb-3">
             <Link
               to={pathUrl}
@@ -101,14 +101,15 @@ function NavBar() {
             </button>
           </div>
           <div
-            class={`px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800 transition-all duration-200 ease-in-out ${
+            className={`px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800 transition-all duration-200 ease-in-out ${
               drop[i] ? "visible" : "hidden"
             }`}
           >
-            {path.projects.map((project) => {
+            {path.projects.map((project, i) => {
               const projectUrl = `/${changeNameToUrl(project.title)}`;
               return (
                 <Link
+                  key={i}
                   to={projectUrl}
                   className="block ml-1 px-4 py-2 rounded hover:bg-blue-300 transition-all duration-200"
                 >

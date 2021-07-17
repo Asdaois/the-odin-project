@@ -31,7 +31,7 @@ function App() {
         <form className="bg-gray-100 container mx-auto flex flex-col rounded-lg shadow-xl mt-4 py-4 px-6 text-gray-800 justify-between h-64">
           <div className="flex justify-between">
             <label
-              class="block text-gray-700 text-sm font-bold mb-2"
+              className="block text-gray-700 text-sm font-bold mb-2"
               for="title"
             >
               title
@@ -51,7 +51,7 @@ function App() {
           </div>
           <div className="flex justify-between">
             <label
-              class="block text-gray-700 text-sm font-bold mb-2"
+              className="block text-gray-700 text-sm font-bold mb-2"
               for="author"
             >
               Author
@@ -72,7 +72,7 @@ function App() {
           </div>
           <div className="min-w-full">
             <label
-              class="block text-gray-700 text-sm font-bold mb-2"
+              className="block text-gray-700 text-sm font-bold mb-2"
               for="review"
             >
               Review
@@ -116,7 +116,10 @@ function App() {
         </form>
         {books.map((book, i) => {
           return (
-            <div className="bg-gray-100 container mx-auto flex flex-col rounded-lg shadow-xl mt-4 py-4 px-6 text-gray-800 justify-between h-64">
+            <div
+              key={i}
+              className="bg-gray-100 container mx-auto flex flex-col rounded-lg shadow-xl mt-4 py-4 px-6 text-gray-800 justify-between h-64"
+            >
               <div className="flex justify-between">
                 <h3 className="font-semibold leading-tight text-lg truncate">
                   {book.title}

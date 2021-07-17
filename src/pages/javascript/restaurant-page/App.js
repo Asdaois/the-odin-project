@@ -22,7 +22,7 @@ export default function App() {
     <div className="w-screen p-6 bg-gray-800">
       <NavBar handleClick={setCurrentTab} tabs={tabs} currentTab={currentTab} />
 
-      <div className="text-center bg-gray-700 text-gray-200 p-6 mt-16 rounded-lg">
+      <div className="text-center bg-gray-700 text-gray-200 p-6 mt-16 rounded-lg overflow-hidden">
         {element}
       </div>
     </div>

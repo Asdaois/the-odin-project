@@ -35,11 +35,13 @@ function Course() {
                         className="h-48 w-full object-cover md:w-48  inset-0 object-left "
                       />
                     </div>
-                    <div class="p-8 flex flex-col">
-                      <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold ">
+                    <div className="p-8 flex flex-col">
+                      <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold ">
                         <h3 className="whitespace-normal">{project.title}</h3>
                       </div>
-                      <p class="mt-2 text-gray-500">{project.description} </p>
+                      <p className="mt-2 text-gray-500">
+                        {project.description}{" "}
+                      </p>
                       <Link
                         to={`/${changeNameToUrl(project.title)}`}
                         className="block text-lg leading-tight font-medium text-black hover:underline mt-auto"

@@ -11,7 +11,6 @@ export default function NavBar({ handleClick, tabs, currentTab }) {
       />
       <nav className="flex justify-center items-center">
         {Object.keys(tabs).map((tab, i) => {
-          console.log({ tab, currentTab });
           return (
             <div
               key={i}
