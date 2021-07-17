@@ -21,7 +21,10 @@ export default function App() {
   return (
     <div className="w-screen p-6 bg-gray-800">
       <NavBar handleClick={setCurrentTab} tabs={tabs} currentTab={currentTab} />
-      {element}
+
+      <div className="text-center bg-gray-700 text-gray-200 p-6 mt-16 rounded-lg">
+        {element}
+      </div>
     </div>
   );
 }
