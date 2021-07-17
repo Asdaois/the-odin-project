@@ -1,17 +1,16 @@
-import React, { useLayoutEffect, useRef, useState } from "react";
+import React, { useLayoutEffect as useEffect, useRef, useState } from "react";
 
 export default function Food({ food, index }) {
   const ref = useRef(null);
   const [show, setShow] = useState(false);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const topPosition = ref.current.getBoundingClientRect().top;
     const botPosition = ref.current.getBoundingClientRect().bottom;
-    console.log(ref.current.getBoundingClientRect());
 
     const onScroll = () => {
       const scrollPosition = window.scrollY + window.innerHeight;
-      const isNotScrolledPast = window.scrollY < botPosition;
+      const isNotScrolledPast = window.scrollY < botPosition + 100;
       if (topPosition < scrollPosition && isNotScrolledPast) {
         setShow(true);
       } else {
@@ -43,7 +42,7 @@ export default function Food({ food, index }) {
         <img
           src={food.image}
           alt=""
-          className={`transform transition-all duration-500 opacity-0  ${
+          className={`transform transition-all ease-in-out duration-500 opacity-0  ${
             show
               ? "opacity-100 translate-x-0"
               : index % 2
