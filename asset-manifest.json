@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/the-odin-project/static/css/main.dd828250.chunk.css",
-    "main.js": "/the-odin-project/static/js/main.7edd6344.chunk.js",
-    "main.js.map": "/the-odin-project/static/js/main.7edd6344.chunk.js.map",
+    "main.css": "/the-odin-project/static/css/main.aa9defcf.chunk.css",
+    "main.js": "/the-odin-project/static/js/main.34e951a7.chunk.js",
+    "main.js.map": "/the-odin-project/static/js/main.34e951a7.chunk.js.map",
     "runtime-main.js": "/the-odin-project/static/js/runtime-main.327344d2.js",
     "runtime-main.js.map": "/the-odin-project/static/js/runtime-main.327344d2.js.map",
     "static/js/2.73754156.chunk.js": "/the-odin-project/static/js/2.73754156.chunk.js",
     "static/js/2.73754156.chunk.js.map": "/the-odin-project/static/js/2.73754156.chunk.js.map",
     "index.html": "/the-odin-project/index.html",
-    "static/css/main.dd828250.chunk.css.map": "/the-odin-project/static/css/main.dd828250.chunk.css.map",
+    "static/css/main.aa9defcf.chunk.css.map": "/the-odin-project/static/css/main.aa9defcf.chunk.css.map",
     "static/js/2.73754156.chunk.js.LICENSE.txt": "/the-odin-project/static/js/2.73754156.chunk.js.LICENSE.txt",
     "static/media/CAMARONES BUDDHA.84d280b7.jpg": "/the-odin-project/static/media/CAMARONES BUDDHA.84d280b7.jpg",
     "static/media/Charsiu Mixto.5c6a40ae.jpg": "/the-odin-project/static/media/Charsiu Mixto.5c6a40ae.jpg",
@@ -25,7 +25,7 @@
   "entrypoints": [
     "static/js/runtime-main.327344d2.js",
     "static/js/2.73754156.chunk.js",
-    "static/css/main.dd828250.chunk.css",
-    "static/js/main.7edd6344.chunk.js"
+    "static/css/main.aa9defcf.chunk.css",
+    "static/js/main.34e951a7.chunk.js"
   ]
 }
