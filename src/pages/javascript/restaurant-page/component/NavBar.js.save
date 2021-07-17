@@ -1,0 +1,24 @@
+exexit
+exit
+sudo -u someone /bin/bash -c "echo hello > /devimport React from "react";
+export default function NavBar({ handleClick, tabs }) {
+  return (
+    <nav>
+      {tabs.map((tab, i) => {
+        return (
+          <div
+            key={i}
+            onClick={() => {
+              handleClick(tab.name);
+            }}
+            className="capitalize hover:cursor-pointer"
+          >
+            {tab.name}
+          </div>
+        );
+      })}
+    </nav>
+  );
+}
+:q
+
