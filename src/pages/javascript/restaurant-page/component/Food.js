@@ -22,7 +22,7 @@ export default function Food({ food, index }) {
   return (
     <div
       ref={ref}
-      className="flex border-2 rounded-lg border-gray-400 bg-gray-200 text-gray-700 lg:w-1/2 self-center flex-col lg:flex-row md:w-1/3 lg:h-72"
+      className="flex border-2 rounded-lg border-gray-400 bg-gray-200 text-gray-700 lg:w-1/2 self-center flex-col lg:flex-row md:w-1/3 lg:h-72 "
       key={food.name.toLowerCase()}
     >
       <div
