@@ -1,6 +1,4 @@
-# Preview on Github Pages
-
-[Page](https://asdaois.github.io/the-odin-project/)
+# [Preview on Github Pages](https://asdaois.github.io/the-odin-project/)
 
 # Getting Started with Create React App
 
