@@ -1,5 +1,5 @@
+import logo from "assets/restaurant-images/logo.jpg";
 import React from "react";
-import logo from "../images/logo.jpg";
 
 export default function NavBar({ handleClick, tabs, currentTab }) {
   return (

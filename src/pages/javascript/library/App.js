@@ -1,8 +1,8 @@
 // TODO: Optional - we haven’t learned any techniques for actually storing our data anywhere, so when the user refreshes the page, all of their books will disappear! If you want, you are capable of adding some persistence to this library app using the Web Storage API.
-import AddDocument from "icons/AddDocument";
-import BookClose from "icons/BookClose";
-import BookOpen from "icons/BookOpen";
-import Trash from "icons/Trash";
+import AddDocument from "assets/icons/AddDocument";
+import BookClose from "assets/icons/BookClose";
+import BookOpen from "assets/icons/BookOpen";
+import Trash from "assets/icons/Trash";
 import React, { useState } from "react";
 
 function Book(title = "", author = "", review = "") {

@@ -1,4 +1,4 @@
-import lybraryImage from "animations/library.gif";
+import lybraryImage from "assets/animations/library.gif";
 export const curriculum = {
   title: "Full Stack Javascript",
   description:

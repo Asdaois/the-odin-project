@@ -1,7 +1,7 @@
+import o from "assets/tic-tac-toe-art/o.png";
+import x from "assets/tic-tac-toe-art/x.png";
+import tie from "assets/tic-tac-toe-art/xo.png";
 import React, { useEffect, useState } from "react";
-import o from "./art/o.png";
-import x from "./art/x.png";
-import tie from "./art/xo.png";
 
 export default function App() {
   const [plays, setPlays] = useState(new Array(9).fill(null));

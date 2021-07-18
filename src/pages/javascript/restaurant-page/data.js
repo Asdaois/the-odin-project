@@ -1,13 +1,13 @@
-import camaronesBuddha from "./images/CAMARONES BUDDHA.jpg";
-import charsiuMixto from "./images/Charsiu Mixto.jpg";
-import clasicoPork from "./images/clásico pork ramen.jpg";
-import dragon from "./images/Dragon.jpg";
-import fideosDragon from "./images/FIDEOS DRAGÓN.jpg";
-import padThai from "./images/PAD THAI.jpg";
-import ramenCostilla from "./images/Ramen de costilla.jpg";
-import ramenLangostinos from "./images/Ramen de langostinos.jpg";
-import tonkotsuRamen from "./images/TONKOTSU RAMEN.jpg";
-import wontonMeinEspecialCamarones from "./images/Wonton mein especial de camarones.jpg";
+import camaronesBuddha from "assets/restaurant-images/CAMARONES BUDDHA.jpg";
+import charsiuMixto from "assets/restaurant-images/Charsiu Mixto.jpg";
+import clasicoPork from "assets/restaurant-images/clásico pork ramen.jpg";
+import dragon from "assets/restaurant-images/Dragon.jpg";
+import fideosDragon from "assets/restaurant-images/FIDEOS DRAGÓN.jpg";
+import padThai from "assets/restaurant-images/PAD THAI.jpg";
+import ramenCostilla from "assets/restaurant-images/Ramen de costilla.jpg";
+import ramenLangostinos from "assets/restaurant-images/Ramen de langostinos.jpg";
+import tonkotsuRamen from "assets/restaurant-images/TONKOTSU RAMEN.jpg";
+import wontonMeinEspecialCamarones from "assets/restaurant-images/Wonton mein especial de camarones.jpg";
 
 export const restaurantData = {
   name: "The Ramen Bar",
