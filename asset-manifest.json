@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/the-odin-project/static/css/main.1529fcc4.chunk.css",
-    "main.js": "/the-odin-project/static/js/main.0b51782d.chunk.js",
-    "main.js.map": "/the-odin-project/static/js/main.0b51782d.chunk.js.map",
+    "main.css": "/the-odin-project/static/css/main.f3e85839.chunk.css",
+    "main.js": "/the-odin-project/static/js/main.2668840e.chunk.js",
+    "main.js.map": "/the-odin-project/static/js/main.2668840e.chunk.js.map",
     "runtime-main.js": "/the-odin-project/static/js/runtime-main.327344d2.js",
     "runtime-main.js.map": "/the-odin-project/static/js/runtime-main.327344d2.js.map",
     "static/js/2.a8fc3c0f.chunk.js": "/the-odin-project/static/js/2.a8fc3c0f.chunk.js",
     "static/js/2.a8fc3c0f.chunk.js.map": "/the-odin-project/static/js/2.a8fc3c0f.chunk.js.map",
     "index.html": "/the-odin-project/index.html",
-    "static/css/main.1529fcc4.chunk.css.map": "/the-odin-project/static/css/main.1529fcc4.chunk.css.map",
+    "static/css/main.f3e85839.chunk.css.map": "/the-odin-project/static/css/main.f3e85839.chunk.css.map",
     "static/js/2.a8fc3c0f.chunk.js.LICENSE.txt": "/the-odin-project/static/js/2.a8fc3c0f.chunk.js.LICENSE.txt",
     "static/media/CAMARONES BUDDHA.84d280b7.jpg": "/the-odin-project/static/media/CAMARONES BUDDHA.84d280b7.jpg",
     "static/media/Charsiu Mixto.5c6a40ae.jpg": "/the-odin-project/static/media/Charsiu Mixto.5c6a40ae.jpg",
@@ -25,7 +25,7 @@
   "entrypoints": [
     "static/js/runtime-main.327344d2.js",
     "static/js/2.a8fc3c0f.chunk.js",
-    "static/css/main.1529fcc4.chunk.css",
-    "static/js/main.0b51782d.chunk.js"
+    "static/css/main.f3e85839.chunk.css",
+    "static/js/main.2668840e.chunk.js"
   ]
 }
