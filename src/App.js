@@ -4,6 +4,7 @@ import NavBar from "components/NavBar";
 import Library from "pages/javascript/library/App";
 import RestaurantPage from "pages/javascript/restaurant-page/App";
 import TicTacToe from "pages/javascript/tic-tac-toe/App";
+import TodoList from "pages/javascript/todo-list/App";
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 
@@ -16,6 +17,7 @@ function App() {
         <Route path={"/tic-tac-toe"} component={TicTacToe} />
         <Route path={"/restaurant-page"} component={RestaurantPage} />
         <Route path={`/course/:course`} component={Course} />
+        <Route path={"/todo-list"} component={TodoList} />
         <Route path={`/`} component={Home} />
       </Switch>
     </div>
