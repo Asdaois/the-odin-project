@@ -7,8 +7,6 @@ import React from "react";
 import MenuOption from "./components/MenuOption";
 import Icon from "./Icon";
 
-const sizeMedium = "h-12 w-12 text-gray-300 self-center";
-
 export default function App() {
   return (
     <div className="min-h-screen min-w-full bg-blue-800 text-gray-300 text-lg font-bold grid grid-rows-5 grid-cols-5 ">
@@ -20,6 +18,9 @@ export default function App() {
         <MenuOption name="Day" icon={<DayIcon />} />
         <MenuOption name="Calendar" icon={<CalendarIcon />} />
         <hr className="w-3/4 border-2 border-gray-700 mx-auto" />
+        <span className="text-2xl text-left hidden tracking-wide md:block">
+          Projects
+        </span>
         <MenuOption name="Create Project" icon={<CreateBLankIcon />} />
         <MenuOption name="Projects" icon={<ProjectsTodoIcon />} />
         <MenuOption
