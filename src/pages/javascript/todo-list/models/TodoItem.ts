@@ -1,4 +1,4 @@
-enum Priority {
+export enum Priority {
   LOW,
   MEDIUM,
   HIGH,
@@ -6,7 +6,7 @@ enum Priority {
 export default interface TodoItem {
   id: any;
   name: string;
-  dueDate: Date;
+  dueDate: Date | number;
   note: string;
   priority: Priority;
 }
