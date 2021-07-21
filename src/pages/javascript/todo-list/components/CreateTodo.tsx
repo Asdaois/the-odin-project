@@ -26,7 +26,7 @@ function CreateTodo({ handleNewTodo: handleTodos }: CreateTodoProps) {
   }, []);
 
   function handleInput(e: React.ChangeEvent<HTMLInputElement>) {
-    const { name, value } = e.target;
+    const { name, value } = e.currentTarget;
     setTodo((prevState: TodoItem) => ({ ...prevState, [name]: value }));
   }
 
@@ -53,9 +53,24 @@ function CreateTodo({ handleNewTodo: handleTodos }: CreateTodoProps) {
         >
           Priority
         </label>
-        <select name="" id="" className="form-select rounded">
-          {priorityOptions?.map((option) => {
-            return <option>{option}</option>;
+        <select
+          name=""
+          id=""
+          className="form-select rounded"
+          onChange={(e) => {
+            const { value } = e.currentTarget;
+            setTodo((prevTodo) => ({
+              ...prevTodo,
+              priority: Priority[value as keyof typeof Priority],
+            }));
+          }}
+        >
+          {priorityOptions?.map((option, index) => {
+            return (
+              <option key={index} id={index.toString()}>
+                {option}
+              </option>
+            );
           })}
         </select>
       </div>

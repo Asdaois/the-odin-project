@@ -4,7 +4,7 @@ function Medium(props) {
   return (
     <svg
       data-name="Layer 1"
-      viewBox="0 0 100 125"
+      viewBox="0 0 100 100"
       fill="currentColor"
       {...props}
     >
