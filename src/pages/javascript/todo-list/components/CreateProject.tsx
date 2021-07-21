@@ -3,13 +3,17 @@ import TodoItem from "../models/TodoItem";
 import TodoProject from "../models/TodoProject";
 import CreateTodo from "./CreateTodo";
 import Todo from "./Todo";
+
 const defaultProject: TodoProject = {
   id: "",
   name: "",
   todos: [],
 };
+interface CreateProjectProps {
+  addProject: (project: TodoProject) => void;
+}
 
-export default function CreateProject() {
+export default function CreateProject({ addProject }: CreateProjectProps) {
   const [project, setProject] = useState<TodoProject>(defaultProject);
 
   function handleInput(e: React.ChangeEvent<HTMLInputElement>) {
@@ -31,8 +35,9 @@ export default function CreateProject() {
     ];
     setProject((prev) => ({ ...prev, todos: todosList }));
   }
+
   return (
-    <div className="text-gray-700 px-4 py-4 flex flex-col gap-4 m-auto ">
+    <div className="text-gray-700 flex flex-col gap-4 m-auto ">
       <div className="bg-blue-700 py-4 px-4 rounded-xl">
         <h2 className="text-white text-2xl">Project</h2>
         <div className="flex flex-col gap-4">
@@ -51,6 +56,20 @@ export default function CreateProject() {
               value={project?.name || ""}
               className={`form-input focus:outline-none focus:ring-1 focus:ring-green-600 rounded`}
             />
+            <input
+              type="button"
+              value="Add"
+              className="bg-blue-400 hover:bg-blue-500 rounded px-4 py-2 text-white font-bold ml-4"
+              onClick={(e) => {
+                if (e.currentTarget.value.length < 4) {
+                  alert(
+                    "The name of the project has to be greater thant 4 letters"
+                  );
+                  return;
+                }
+                addProject(project);
+              }}
+            />
           </div>
         </div>
       </div>
@@ -59,7 +78,6 @@ export default function CreateProject() {
           TODOs of the project
         </h3>
         <div className="bg-blue-500 p-2 rounded">
-          <h3 className="text-white text-2xl">Create</h3>
           <CreateTodo handleNewTodo={handleTodos} />
         </div>
         <div className="flex flex-col gap-2">

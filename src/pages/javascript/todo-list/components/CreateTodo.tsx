@@ -97,7 +97,7 @@ function CreateTodo({ handleNewTodo: handleTodos }: CreateTodoProps) {
           setTodo(DefaultTodo);
           handleTodos(todo);
         }}
-        className="font-bold py-2 px-4 rounded-lg bg-blue-400 text-white hover:bg-blue-500 mx-auto w-1/3"
+        className="font-bold py-2 px-4 rounded-lg bg-blue-400 text-white hover:bg-blue-500 mx-auto "
       >
         Add
       </button>
