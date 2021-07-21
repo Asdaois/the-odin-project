@@ -21,7 +21,6 @@ function CreateTodo({ handleNewTodo: handleTodos }: CreateTodoProps) {
     const enumsKeys = Object.keys(Priority)
       .map((key, i) => Priority[i])
       .filter((value) => typeof value === "string") as string[];
-    console.log({ enumsKeys });
     setPriorityOptions(enumsKeys);
   }, []);
 
@@ -78,12 +77,21 @@ function CreateTodo({ handleNewTodo: handleTodos }: CreateTodoProps) {
         <label htmlFor="dueDate" className="px-2 inline-block w-1/3 text-white">
           Due Date
         </label>
-        <input type="date" name="dueDate" id="" />
+        <input
+          type="datetime-local"
+          name="dueDate"
+          id=""
+          onChange={(e) => {
+            setTodo((prev) => ({ ...prev, dueDate: new Date(e.target.value) }));
+          }}
+        />
       </div>
       <button
         onClick={() => {
-          if (todo.name.length < 5) {
-            alert("The name of the todo need more thant 5 letters");
+          if (todo.name.length < 5 || todo.name.length > 40) {
+            alert(
+              "The name of the todo need more than 5 letters and less that 40"
+            );
             return;
           }
           setTodo(DefaultTodo);

@@ -32,7 +32,7 @@ export default function CreateProject() {
     setProject((prev) => ({ ...prev, todos: todosList }));
   }
   return (
-    <div className="text-gray-700 px-4 py-4 flex flex-col gap-4  md:w-3/4 lg:w-1/2 m-auto ">
+    <div className="text-gray-700 px-4 py-4 flex flex-col gap-4 m-auto ">
       <div className="bg-blue-700 py-4 px-4 rounded-xl">
         <h2 className="text-white text-2xl">Project</h2>
         <div className="flex flex-col gap-4">

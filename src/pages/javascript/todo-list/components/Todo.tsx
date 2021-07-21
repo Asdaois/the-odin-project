@@ -1,3 +1,4 @@
+import formatDistanceToNow from "date-fns/formatDistanceToNowStrict";
 import React from "react";
 import MemoHigh from "../icons/High";
 import MemoLow from "../icons/Low";
@@ -15,7 +16,7 @@ export default function Todo({ todo, setTodo, index }: TodoProps) {
   return (
     <div
       key={index}
-      className={`flex justify-between rounded ${
+      className={`flex justify-between h-11 w-full  rounded overflow-auto ${
         todo.finalized
           ? "line-through  text-gray-200 bg-gray-500"
           : "bg-gray-400 "
@@ -40,7 +41,12 @@ export default function Todo({ todo, setTodo, index }: TodoProps) {
             setTodo(modifiedTodo, index);
           }}
         />
-        <h4 className={``}>{todo.name}</h4>
+        <h4 className={`overflow-hidden text-xs md:text-base self-center`}>
+          {todo.name}
+        </h4>
+        <span className="text-green-700 overflow-hidden text-xs md:text-base self-center">
+          {formatDistanceToNow(todo.dueDate, { addSuffix: true })}
+        </span>
       </div>
       <button className="h-11 w-11 rounded bg-black">
         {todo.priority === Priority.LOW ? (
