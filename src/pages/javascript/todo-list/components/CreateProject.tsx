@@ -14,7 +14,7 @@ interface CreateProjectProps {
 }
 
 export default function CreateProject({ addProject }: CreateProjectProps) {
-  const [project, setProject] = useState<TodoProject>(defaultProject);
+  const [newProject, setProject] = useState<TodoProject>(defaultProject);
 
   function handleInput(e: React.ChangeEvent<HTMLInputElement>) {
     const { name, value } = e.target;
@@ -22,16 +22,16 @@ export default function CreateProject({ addProject }: CreateProjectProps) {
   }
 
   function handleTodos(newTodo: TodoItem) {
-    const todosList: TodoItem[] = [...project.todos];
+    const todosList: TodoItem[] = [...newProject.todos];
     todosList.push(newTodo);
     setProject((prev) => ({ ...prev, todos: todosList }));
   }
 
   function updateTodo(todo: TodoItem, index: number) {
     const todosList: TodoItem[] = [
-      ...project.todos.slice(0, index),
+      ...newProject.todos.slice(0, index),
       todo,
-      ...project.todos.slice(index + 1),
+      ...newProject.todos.slice(index + 1),
     ];
     setProject((prev) => ({ ...prev, todos: todosList }));
   }
@@ -53,7 +53,7 @@ export default function CreateProject({ addProject }: CreateProjectProps) {
               name="name"
               id=""
               onChange={handleInput}
-              value={project?.name || ""}
+              value={newProject?.name || ""}
               className={`form-input focus:outline-none focus:ring-1 focus:ring-green-600 rounded`}
             />
             <input
@@ -61,13 +61,11 @@ export default function CreateProject({ addProject }: CreateProjectProps) {
               value="Add"
               className="bg-blue-400 hover:bg-blue-500 rounded px-4 py-2 text-white font-bold ml-4"
               onClick={(e) => {
-                if (e.currentTarget.value.length < 4) {
-                  alert(
-                    "The name of the project has to be greater thant 4 letters"
-                  );
+                if (e.currentTarget.value.length === 0) {
+                  alert("The name has no name");
                   return;
                 }
-                addProject(project);
+                addProject(newProject);
               }}
             />
           </div>
@@ -81,7 +79,7 @@ export default function CreateProject({ addProject }: CreateProjectProps) {
           <CreateTodo handleNewTodo={handleTodos} />
         </div>
         <div className="flex flex-col gap-2">
-          {project.todos.map((todo, i) => {
+          {newProject.todos.map((todo, i) => {
             return <Todo todo={todo} index={i} setTodo={updateTodo} />;
           })}
         </div>

@@ -43,6 +43,7 @@ export default function App() {
     projects[index] = project;
     setAppData((prev) => ({ ...prev, projects }));
   }
+
   return (
     <div className="min-h-screen min-w-full bg-blue-800 text-gray-300 text-lg font-bold grid grid-rows-5 grid-cols-5 ">
       <div className="bg-blue-500 text-left uppercase text-3xl flex col-span-5 p-4 align-middle">

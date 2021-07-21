@@ -32,6 +32,7 @@ export default function Todo({ todo, setTodo, index }: TodoProps) {
           name="finalized"
           id=""
           className="self-center focus:outline-none h-6 w-6 mr-2"
+          onChange={() => {}}
           checked={todo.finalized}
           onClick={(e) => {
             const modifiedTodo: TodoItem = {

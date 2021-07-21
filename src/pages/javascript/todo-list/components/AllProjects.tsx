@@ -1,7 +1,6 @@
 import React from "react";
-import TodoItem from "../models/TodoItem";
 import TodoProject from "../models/TodoProject";
-import Todo from "./Todo";
+import Project from "./Project";
 
 interface AllProjectsProps {
   projects: TodoProject[];
@@ -14,29 +13,18 @@ export default function AllProjects({
 }: AllProjectsProps) {
   return (
     <div className="p-4 flex flex-col gap-4">
-      {projects.map((project, id) => {
-        const handleUpdate = (todo: TodoItem, index: number) => {
-          const modifiedProject = { ...project };
-          modifiedProject.todos[index] = todo;
-          updateProject(modifiedProject, id);
-        };
+      {projects.length === 0 && (
+        <div className="text-red-500">There are not projects yet</div>
+      )}
 
+      {projects.map((project, id) => {
         return (
-          <div className="bg-blue-700 p-4 rounded-lg" key={id}>
-            <div className="mb-4">{project.name}</div>
-            <div className="flex flex-col gap-4">
-              {project.todos.map((todo, idTodo) => {
-                return (
-                  <Todo
-                    index={idTodo}
-                    todo={todo}
-                    key={idTodo}
-                    setTodo={handleUpdate}
-                  />
-                );
-              })}
-            </div>
-          </div>
+          <Project
+            id={id}
+            project={project}
+            updateProject={updateProject}
+            key={id}
+          />
         );
       })}
     </div>
