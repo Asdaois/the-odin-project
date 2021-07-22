@@ -10,7 +10,7 @@ import Icon from "./Icon";
 import TodoItem from "./models/TodoItem";
 import TodoProject from "./models/TodoProject";
 
-interface AppData {
+export interface AppData {
   unassignedTodos: TodoItem[];
   projects: TodoProject[];
 }
@@ -55,7 +55,7 @@ export default function App() {
         {tab === Tabs.CREATE_PROJECT && (
           <CreateProject addProject={addProject} />
         )}
-        {tab === Tabs.ALL && <AllTodos />}
+        {tab === Tabs.ALL && <AllTodos {...appData} />}
         {tab === Tabs.CALENDAR && <Calendar />}
         {tab === Tabs.DAY && <DaysTodos />}
         {tab === Tabs.PROJECTS && (
