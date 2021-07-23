@@ -1,3 +1,5 @@
+// TODO: Add capacibility to circle priority
+
 import formatDistanceToNow from "date-fns/formatDistanceToNowStrict";
 import React from "react";
 import MemoHigh from "../icons/High";
@@ -30,7 +32,6 @@ export default function Todo({ todo, setTodo, index }: TodoProps) {
         <input
           type="checkbox"
           name="finalized"
-          id=""
           className="self-center focus:outline-none h-6 w-6 mr-2"
           onChange={() => {}}
           checked={todo.finalized}

@@ -33,7 +33,9 @@ export default function App() {
     }
     const projects = [...appData.projects];
     projects.push(project);
-    setAppData((prev) => ({ ...prev, projects }));
+    const modifiedAppData = { ...appData };
+    modifiedAppData.projects = projects;
+    setAppData(modifiedAppData);
     setTab(Tabs.PROJECTS);
   }
 
@@ -41,7 +43,10 @@ export default function App() {
     if (!appData) return;
     const projects = [...appData.projects];
     projects[index] = project;
-    setAppData((prev) => ({ ...prev, projects }));
+    const modifiedAppData = { ...appData };
+    modifiedAppData.projects = projects;
+    setAppData(modifiedAppData);
+    setTab(Tabs.PROJECTS);
   }
 
   return (

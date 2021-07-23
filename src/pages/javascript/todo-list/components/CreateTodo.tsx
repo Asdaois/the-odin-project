@@ -38,7 +38,6 @@ function CreateTodo({ handleNewTodo: handleTodos }: CreateTodoProps) {
         <input
           type="text"
           name="name"
-          id=""
           onChange={handleInput}
           value={todo?.name}
           placeholder="New Todo"
@@ -54,7 +53,6 @@ function CreateTodo({ handleNewTodo: handleTodos }: CreateTodoProps) {
         </label>
         <select
           name=""
-          id=""
           className="form-select rounded"
           onChange={(e) => {
             const { value } = e.currentTarget;
@@ -80,7 +78,6 @@ function CreateTodo({ handleNewTodo: handleTodos }: CreateTodoProps) {
         <input
           type="datetime-local"
           name="dueDate"
-          id=""
           onChange={(e) => {
             setTodo((prev) => ({ ...prev, dueDate: new Date(e.target.value) }));
           }}

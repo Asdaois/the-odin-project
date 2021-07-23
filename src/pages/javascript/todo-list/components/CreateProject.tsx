@@ -51,7 +51,6 @@ export default function CreateProject({ addProject }: CreateProjectProps) {
             <input
               type="text"
               name="name"
-              id=""
               onChange={handleInput}
               value={newProject?.name || ""}
               className={`form-input focus:outline-none focus:ring-1 focus:ring-green-600 rounded`}

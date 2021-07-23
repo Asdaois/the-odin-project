@@ -48,7 +48,7 @@ export default function Project({ project, id, updateProject }: ProjectProps) {
         className={`my-2 bg-green-600 p-4 rounded-lg transition-all  ${
           canAddTodo
             ? "block duration-300"
-            : "transform translate-x-96 h-0 opacity-0 duration-300 fixed"
+            : "transform translate-x-96 h-0 opacity-0 duration-300 hidden"
         }`}
       >
         <CreateTodo handleNewTodo={addTodo} />
